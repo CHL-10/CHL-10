@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="//at.alicdn.com/t/font_849071_nephwzbsea.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+
+  <title>VR虚拟现实</title>
+  <link>
+  <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '微软雅黑', sans-serif;
+  }
+  
+  body{
+    background: #000;
+  }
+  .header,section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 100px;
+  }
+  .header h1{
+      font-size: 100px;
+      align-items: center;
+      justify-content: center;
+      margin-top: -100px;
+    }
+    .header p{
+        font-size: 50px;
+        float: left;
+    }
+    .header .but{
+        color: #fff;
+        display: block;
+        font-size: 30px;
+        padding: 10px 10px;
+        background-color:black;
+        border: 3px solid skyblue;
+        border-radius: 5%;
+
+    }
+    .header .but:hover{
+        background-color: skyblue;
+    }
+  
+  .header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  section h2 {
+    position: relative;
+    color: #fff;
+    font-size: 3em;
+  }
+  section p {
+    position: relative;
+    color: #fff;
+    font-size: 1.2em;
+  }
+ 
+  h2{
+    position: relative;
+    text-align: center;
+    font-family: 隶书;
+    font-size: 100px;
+    margin-top: 250px;
+  }
+  .content{
+    
+    position: relative;
+    width: 80%;
+    height: 800px;
+    border: 2px black solid;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .item{
+    position: relative;
+    display: block;
+    width: 350px;
+    height: 450px;
+    background: url(https://i.loli.net/2020/09/28/mlREyUVpjGXMNOi.jpg);
+    border-radius: 10%;
+    box-shadow:inset 1px 1px 30px 3px, 10px 10px 300px 50px;
+    margin-top: 450px;
+    float: left;
+    margin: 0 50px;
+    transition: all 0.4s ease-in-out;
+  }
+  .info{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color:skyblue;
+    /* box-shadow: 10px 10px 50px 10px; */
+    border-radius: 100%;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0);
+  }
+  .info h2{
+    opacity: 0;
+    height: 140px;
+    font-size: 20px;
+    color: black;
+    margin: 0 30px;
+    padding-top:  45px;
+    transition: all 0.4s ease-in-out;
+  }
+  .info p{
+    opacity: 0;
+    font-size: 10px;
+    font-style: italic;
+    height: 100px;
+    margin: -50px auto;
+    transition: all 0.4s ease-in-out 0.4s;
+  }
+  .item:hover{
+   box-shadow: 10px 10px 50px 10px;
+  }
+  .item:hover .info{
+    opacity: 1;
+  }
+  .item:hover .info h2{
+    opacity: 1;
+  }
+  .item:hover .info p{
+    opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+        <video src="C:\AppServ\www\What are words.mp4" muted autoplay loop width="100%" height="auto"></video>
+        <h1>未来属于实时技术</h1>
+        <p>虚幻引擎是实时和3D图形领域发展最快的技术。快来学习这项新技术吧！它能帮助您在游戏开发、建筑、影视、汽车和其他领域取得成功。</p>
+        <div class="but">开始学习</div>
+  </div>
+ 
+  <section>
+    <div class="content">
+      <h2>以劳动书写人生风采</h2>
+      <p>
+        中华民族是一个热爱劳动的民族，劳动精神自古以来就流淌在中国人民的血脉之中，去不掉、打不破、灭不了。“幸福是奋斗出来的”，个人追求的实现，离不开不懈奋斗劳动;家国复兴的使命，也只有靠劳动来成就。
+
+     此处省略了很多字...................................
+      </p>
+    </div>
+  </section>
+  <script>
+    let video = document.querySelector('video')
+    window.addEventListener('scroll', function() {
+      let value = 1 + window.scrollY / -600
+      video.style.opacity = value
+    })
+  </script>
+
+<div class="content">
+    <div class="item">
+        <div class="info">
+            <h2>USER</h1>
+                <p>鼠标悬停</p> 
+        </div>
+    </div>
+    <div class="item">
+        <div class="info">
+            <h2>USER</h1>
+                <p>鼠标悬停</p>
+        </div>
+    </div>
+    <div class="item">
+        <div class="info">
+            <h2>USER</h1>
+                <p>鼠标悬停</p>
+        </div>
+    </div>
+</body>
+</html>
